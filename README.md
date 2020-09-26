@@ -2,7 +2,7 @@
 
 Gridsome starter for creating a great beers website.
 
-### Getting started
+## Getting started
 
 Clone the repository
 
@@ -11,7 +11,7 @@ git clone https://github.com/jordanerousseau/starter-gridsome-beers.git
 cd starter-gridsome-beers
 ```
 
-### Install dependencies and run your server
+## Install dependencies and run your server
 
 ```bash
 # Using yarn
