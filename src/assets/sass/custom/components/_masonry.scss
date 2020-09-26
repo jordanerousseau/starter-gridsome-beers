@@ -1,0 +1,83 @@
+/*  Masonry
+================================================ */
+
+#masonry {
+  position: relative;
+  padding: 17rem 0;
+  transition: $transition;
+
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: $Druk_Wide;
+    font-size: 717px;
+    line-height: 1;
+    color: $yellow;
+    margin: auto;
+    width: 100%;
+    transform: rotate(-90deg) scaleX(-1);
+    display: block;
+    content: "BEERS";
+    z-index: -1;
+  }
+
+  .item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 5rem;
+    overflow: hidden;
+
+    .row {
+      align-items: center;
+    }
+
+    h2 {
+      @extend %title-1;
+    }
+
+    h3 {
+      @extend %title-2;
+    }
+
+    img {
+      transition: $transition;
+    }
+
+    .button {
+      @extend %button;
+    }
+
+    &:hover {
+      img {
+        filter: drop-shadow(0 20px 0 rgba(10, 10, 10, 0.4));
+      }
+
+      .button {
+        color: black;
+
+        &::before {
+          transform: translate3d(-50%,-50%,0) scale3d(15,15,15);
+        }
+      }
+    }
+  }
+
+  > div {
+    &:last-of-type {
+      .item {
+        .row {
+          flex-direction: row-reverse;
+        }
+
+        h2, h3, button {
+          text-align: right;
+          float: right;
+        }
+      }
+    }
+  }
+}

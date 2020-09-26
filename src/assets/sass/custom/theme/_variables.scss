@@ -1,0 +1,118 @@
+/*  Variables
+================================================ */
+
+$transition: all 0.3s ease-in-out;
+
+// Mixin
+@mixin placeholder {
+  ::placeholder { @content; }
+  :-ms-input-placeholder { @content; }
+  ::-ms-input-placeholder { @content; }
+}
+
+@mixin selection {
+  ::-moz-selection { @content; }
+  ::selection { @content; }
+}
+
+%title-1 {
+  font-family: $Druk_Cond;
+  font-size: 8rem;
+  line-height: 1;
+  color: black;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+%title-2 {
+  font-family: $HelveticaNeueBold;
+  font-size: 2rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+%button {
+  position: relative;
+  font-family: $HelveticaNeueBold;
+  font-size: 1.4rem;
+  border-radius: 0;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  border: 0;
+  padding: 0.7rem 3.7rem;
+  height: auto;
+  width: auto;
+  transition: $transition;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $yellow;
+    transform-origin: center;
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    transition: $transition;
+  }
+
+  &:hover {
+    color: black;
+
+    &::before {
+      transform: translate3d(-50%,-50%,0) scale3d(15,15,15);
+    }
+  }
+}
+
+%texte {
+  font-family: $HelveticaNeueRegular;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: black;
+
+  b, strong {
+    font-family: $HelveticaNeueBold;
+  }
+
+  i {
+    font-style: italic;
+  }
+}
+
+%table {
+  th {
+    font-family: $HelveticaNeueBold;
+    font-size: 2rem;
+    color: $grey_table;
+    text-transform: uppercase;
+  }
+
+  td {
+    font-family: $HelveticaNeueRegular;
+    font-size: 14px;
+    color: black;
+    text-align: right;
+
+    &.first_line {
+      font-family: $HelveticaNeueBold;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  td, th {
+    border-bottom: 1px solid $grey;
+  }
+}

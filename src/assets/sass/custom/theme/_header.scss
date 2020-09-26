@@ -1,0 +1,80 @@
+/*  Header
+================================================ */
+
+header {
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid $grey;
+  padding: 1rem 6rem;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+
+  .row {
+    align-items: center;
+  }
+
+  #brand-logo {
+    justify-content: flex-start;
+
+    h1 {
+      margin: 0;
+    }
+
+    a {
+      font-family: $Druk_Cond;
+      font-size: 5rem;
+      line-height: 1;
+      color: black;
+    }
+  }
+
+  #close_modale {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+
+    .close {
+      position: relative;
+      margin: auto;
+      height: 5rem;
+      width: 5rem;
+      background: white;
+      cursor: pointer;
+      transition: $transition;
+
+      &::before {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        width: 5rem;
+        background: white url("../img/close.svg") no-repeat center center;
+        background-size: 60%;
+        content: "";
+        transition: $transition;
+      }
+
+      &:hover {
+        &::before {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+
+  #beer {
+    font-size: 3rem;
+    line-height: 1;
+    justify-content: flex-end;
+    text-align: right;
+    color: black;
+  }
+}

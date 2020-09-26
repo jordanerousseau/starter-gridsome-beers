@@ -1,0 +1,60 @@
+/*  Modal
+================================================ */
+
+#modal {
+  position: relative;
+  padding: 13rem;
+  transition: $transition;
+
+  .column {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &#img {
+      align-items: center;
+    }
+
+    &#fiche {
+      align-items: flex-start;
+    }
+  }
+
+  img {
+    width: 25%;
+  }
+
+  .title {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $Druk_Wide;
+    font-size: 5vw;
+    line-height: 1;
+    color: $yellow;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+  }
+
+  .name {
+    strong {
+      @extend %title-1;
+      font-weight: normal;
+    }
+
+    @extend %title-2;
+  }
+
+  .description {
+    @extend %texte;
+  }
+
+  table {
+    @extend %table;
+  }
+}

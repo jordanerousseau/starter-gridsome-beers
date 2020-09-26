@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'Druk-WideSuper';
+  src: url('Druk-WideSuper.eot?#iefix') format('embedded-opentype'),
+	   url('Druk-WideSuper.otf') format('opentype'),
+	   url('Druk-WideSuper.woff') format('woff'),
+	   url('Druk-WideSuper.ttf') format('truetype'),
+	   url('Druk-WideSuper.svg#Druk-WideSuper') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

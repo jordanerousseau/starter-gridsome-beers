@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'DrukCond-Super';
+  src: url('DrukCond-Super.eot?#iefix') format('embedded-opentype'),
+	   url('DrukCond-Super.otf') format('opentype'),
+	   url('DrukCond-Super.woff') format('woff'),
+	   url('DrukCond-Super.ttf') format('truetype'),
+	   url('DrukCond-Super.svg#DrukCond-Super') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
